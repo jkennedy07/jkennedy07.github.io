@@ -17,109 +17,204 @@ html {
   max-width:900px;
 }
 
+.img-right {
+  float:right;
+  padding: 5px;
+  border: 1px solid #c0c0c0;
+  margin: 10px 0 10px 20px;
+}
+
+.img-left {
+  float:left;
+  padding: 5px;
+  border: 1px solid #c0c0c0;
+  margin: 10px 20px 10px 0;
+}
+
+.img-center {
+  margin: auto;
+  display: block;
+}
+
+/* ------- Responsive Images ---------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ------- Global Styles ---------------*/
 /* colors:
-#66C9FF    (light blue)
-#2175A3    (medium blue)
-#48B4F0    (alternate blue)
-#A8865B    (tan)
-#F0A748    (cream orange)
+#91866C    (tan)
+#64728F    (dark blue)
+#4A61E0    (bright blue)
+#CCD1DB    (silver)
+#DED3BA    (peach)
+#FFEFCC    (cream)
+
+
+#260C0C    (dark charcoal)
+#a9a9a9    (css DarkGrey)
+#696969    (css DimGrey)
+#c0c0c0    (css Silver)
+#f5f5f5    (css WhiteSmoke)
+
+
+font-family: 'Karla', sans-serif;
+font-family: 'Playfair Display', serif;
 */
 
+/* { border: 1px solid blue; } /**/
+
 body {
-    background-color:#A8865B;
-    font-family: 'Fira Sans', sans-serif;
-    margin:0;
+    background-color: #260C0C;
+    color:#000;
 }
 
-header.primary {
-    background-color:#2175A3;
-    text-align:center;
-    color:#ffffff;
-    text-shadow: 2px 2px #000;
-    
-    /* long tedious form */
-    padding-top:40px;
-    padding-bottom:20px;
-    
-    /* one-value shorthand */
-    padding: 100px;
-    
-    /* two-value shorthand */
-    padding: 20px 40px;             /* top/bottom _ left/right */
-    
-    /* four-value shorthand form */
-    padding: 40px 40px 20px 40px;   /* clockwise from top: t,r,b,l */
+h1 {
+    font-family: 'Karla', sans-serif;
+    font-size:6rem;
+    margin: auto;
+    background-color:#CCD1DB;
+    width: 70%;
 }
 
-header.primary h1{
-  font-size:3.2rem;
-  margin: 20px 0;
+h2 {
+  font-size:2.4rem;
 }
 
-header.primary h1 a{
+h5 {
+    font-size:1.2rem;
+    font-style:italic;
+    width:70%;
+    margin: auto;
+}
+
+li {
+  list-style-type:none;
+}
+
+#top-image {
+  margin: 0px auto 100px;
+  width:100%;
+}
+
+nav {
+  background-color:#CCD1DB;
+  text-align:center;
+  padding: 10px;
+}
+
+#main-nav {
+  margin: 0px auto 100px;
+}
+
+#nav-title {
+  font-style: italic;
+}
+
+nav ul {
+  margin:0px auto 40px;
+  padding:0px;
+  width: 80%;
+}
+
+nav ul ul {
+  margin: 0px auto 0px;
+}
+
+nav li p {
+    margin: 5px auto;
+}
+
+nav ul ul li {
+    width: 90%;
+    margin: 10px auto;
+}
+
+nav li {
+  background:#FFEFCC;
+  margin: 10px 0px;
+  font-size:1.5rem;
+  color:#000;
+  padding:5px;
+}
+
+nav a:link, a:visited {
   text-decoration:none;
-  color:#ffffff;
+  color:#000;
+  padding:5px;
 }
 
-header.primary h2{
-  font-size:2rem;
-  /* three-value shorthand  - top, l&r, bot*/
-  margin:20px auto 40px;
+nav a:hover {
+  background-color: rgba(0,0,0,.25);
+  transition: 500ms;
 }
 
-header.primary nav{
-  width:80vw;
-  margin:20px auto;
-  max-width:900px;
+#main-title {
+  text-align:center;
+  font-size:5rem;
+  padding:20px;
 }
 
-header.primary nav ul{
-  display: flex; /* treat as flexbox */
-  flex-direction: row; /* actually the default */
-  justify-content: space-around;
-  padding:0;  /* removes spacing associated with bullets */
+main {
+  background-color:#CCD1DB;
+  padding: 15px;
 }
 
-header.primary nav ul li{
-  list-style-type: none;  /* removes bullets, but not spacing */
-  padding:10px;
+.article-title {
+  margin:0px auto 24px;
+  font-size:2.8rem;
 }
 
-header.primary nav ul li a{
-  color:#ffffff;
+article {
+  border: solid #FFEFCC 1px;
+  padding: 15px;
+}
+
+main article + article {
+  margin: 120px 0px 0px;
+}
+
+article p {
+  font-family:"lusitana";
+  font-size:1.1rem;
+}
+
+article h3 {
+  margin: 10px auto;
+  width:100%;
+}
+
+#bottom-image {
+  margin: 200px auto 100px;
+  width:100%;
+}
+
+.joke {
+  font-family:"lusitana";
+  font-size:0.8rem;
+  width:30%;
+  max-width:500px;
+  min-width:300px;
+  margin: 100px auto 10px;
+  color: #fff;
+}
+
+footer {
+  margin: 20px auto;
+  width:50%;
+  color:#fff;
+}
+
+footer a {
   text-decoration:none;
-  background:#A8865B;
-  padding:8px 16px;
-  background:rgba(0,0,0,.4);
-  border-radius:7px;
-  transition:350ms;
+  padding:5px;
 }
 
-header.primary nav ul li a:hover{
-  background:rgba(0,0,0,.7);
+footer a:hover {
+  background-color: rgba(0,0,0,.25);
+  transition: 500ms;
 }
-
-header.primary nav ul li a:active{
-  background:rgba(0,0,0,1);
-}
-
-/* these buttons break if we got to a narrow screen
-see the media query code at the end */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width:680px) {
   header.primary nav ul{
